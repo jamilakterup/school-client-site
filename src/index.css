@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Josefin+Sans:wght@100;200;300;400;700&family=Major+Mono+Display&display=swap');
+/* all together */
+
+
+/* font-family: 'Croissant One', cursive;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Major Mono Display', monospace; */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body {
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: #eff8f7;
+}
+
+
+@font-face {
+  font-family: "ador-light";
+  src: url("/src/assets/fonts/Li\ Ador\ Noirrit\ Light.ttf")
+}
+
+@font-face {
+  font-family: "alinur-regular";
+  src: url("/src/assets/fonts/Li\ Alinur\ Banglaborno\ Unicode.ttf")
+}
+
+@font-face {
+  font-family: "imarat-bold";
+  src: url("/src/assets/fonts/Li\ Alinur\ Imarat\ Unicode.ttf")
+}
+
+@font-face {
+  font-family: "liakat-bold";
+  src: url("/src/assets/fonts/Li\ Liakat\ Tanjina\ Unicode\ Regular\ .ttf")
+}
+
+@font-face {
+  font-family: "mainak-special";
+  src: url("/src/assets/fonts/Li\ Mainak\ Buniyadi\ Unicode.ttf")
+}
+
+
+
+@font-face {
+  font-family: "sabbir";
+  src: url("/src/assets/fonts/Li\ Sabbir\ Ashalota\ 1\ Unicode.ttf")
+}
+
+
+@font-face {
+  font-family: "alinur";
+  src: url("/src/assets/fonts/LiAlinurPriyoshiUnicode-Regular.ttf")
+}
+
+@font-face {
+  font-family: "totsomo";
+  src: url("/src/assets/fonts/Li\ Alinur\ Tatsama\ Unicode.ttf");
+}
+
+
+
+/* custom root style for font family====================== */
+
+:root {
+  --primary-font: "totsomo";
+  --regular-font: "alinur-regular";
+  --big-font: "liakat-bold";
+  --medium-font: "imarat-bold";
+  --curly-font: "mainak-special";
+  --sad-font: "sabbir";
+  --description-font: "alinur";
+  --extra-font: "ador-light";
+}
+
+/* styles.css custom tailwind style====================== */
+
+/* all font style======================= */
+.primary-font {
+  font-family: var(--primary-font);
+}
+
+.regular-font {
+  font-family: var(--regular-font);
+}
+
+.big-font {
+  font-family: var(--big-font);
+}
+
+.medium-font {
+  font-family: var(--medium-font);
+}
+
+.curly-font {
+  font-family: var(--curly-font);
+}
+
+.sad-font {
+  font-family: var(--sad-font);
+}
+
+.description-font {
+  font-family: var(--description-font);
+}
+
+.extra-font {
+  font-family: var(--extra-font);
+}
+
+
+/* all font style======================= */
+h1 {
+  font-size: 52px;
+}
+
+/* custom container and other global style with responsive size==================== */
+
+.my-container {
+  padding-left: 52px;
+  padding-right: 52px;
+}
+
+
+@media only screen and (max-width: 1280px) {
+  .my-container {
+    padding-left: 42px;
+    padding-right: 42px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .my-container {
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .my-container {
+    padding-left: 27px;
+    padding-right: 27px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .my-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+
+/* custom container and other global style==================== */

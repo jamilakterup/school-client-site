@@ -1,0 +1,43 @@
+.free-mode-swipers {
+    width: 100%;
+    padding-top: 0;
+    /* padding-bottom: 50px; */
+    background: none;
+}
+
+/* .swiper-pagination-bullet {
+    display: none;
+} */
+
+/* .background {
+    height: 600px;
+    background-color: rgba(211, 206, 206, 0.645);
+    width: 100%;
+} */
+
+.free-mode-swiper-slides {
+    background-position: center;
+    background-size: cover;
+    width: 400px;
+    height: 380px;
+    margin-top: 50px;
+}
+
+.free-mode-swiper-slides img {
+    display: block;
+    width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+    .free-mode-swipers {
+        width: 230px;
+    }
+}
+
+.shape-1 {
+    height: 30px;
+    width: 100%;
+    background-color: #eff8f7;
+    position: absolute;
+    bottom: 0;
+}

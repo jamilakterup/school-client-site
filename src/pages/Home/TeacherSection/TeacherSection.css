@@ -1,0 +1,32 @@
+.swipers {
+    width: 100%;
+    padding-top: 0;
+    /* padding-bottom: 50px; */
+    padding-bottom: 150px;
+}
+
+/* .background {
+    height: 600px;
+    background-color: rgba(211, 206, 206, 0.645);
+    width: 100%;
+} */
+
+.swiper-slides {
+    background-position: center;
+    background-size: cover;
+    width: 400px;
+    height: 300px;
+    margin-top: 50px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0006);
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+    .swipers {
+        width: 230px;
+    }
+}

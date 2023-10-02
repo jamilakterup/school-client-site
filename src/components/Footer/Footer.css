@@ -1,0 +1,91 @@
+.custom-bg {
+    background: linear-gradient(to top, #8ed1fc, #ffffff);
+}
+
+.wave {
+    position: absolute;
+    top: -25%;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("/src/assets/images/wave.png");
+    background-size: 1000px 100px;
+    animation: animate 30s linear infinite;
+}
+
+.wave1 {
+    position: absolute;
+    top: -25%;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("/src/assets/images/wave.png");
+    background-size: 1000px 100px;
+    opacity: .5;
+    animation: animate1 15s -5s linear infinite;
+}
+
+.wave2 {
+    position: absolute;
+    top: -25%;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("/src/assets/images/wave.png");
+    background-size: 1000px 100px;
+    opacity: .2;
+    animation: animate2 15s 2s linear infinite;
+}
+
+.wave3 {
+    position: absolute;
+    top: -25%;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("/src/assets/images/wave.png");
+    background-size: 1000px 100px;
+    opacity: .7;
+    animation: animate 5s -5s linear infinite;
+}
+
+
+@keyframes animate {
+    0% {
+        background-position-x: 0;
+    }
+
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+@keyframes animate1 {
+    0% {
+        background-position-x: 0;
+    }
+
+    100% {
+        background-position-x: -1000px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .wave,
+    .wave1,
+    .wave2,
+    .wave3 {
+        top: -15%;
+    }
+}
+
+@media only screen and (max-width: 766px) {
+
+    .wave,
+    .wave1,
+    .wave2,
+    .wave3 {
+        top: -8%;
+    }
+}
