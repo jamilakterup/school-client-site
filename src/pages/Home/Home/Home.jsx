@@ -5,6 +5,7 @@ import History from "../History/History";
 import TeacherSection from "../TeacherSection/TeacherSection";
 import BrightStudent from "../BrightStudent/BrightStudent";
 import VideoGallery from "../VideoGallery/VideoGallery";
+import PhotoGallery from "../PhotoGallery/PhotoGallery";
 
 const Home = () => {
     return (
@@ -19,6 +20,7 @@ const Home = () => {
                 <TeacherSection />
                 <BrightStudent />
                 <VideoGallery />
+                <PhotoGallery />
             </section>
         </>
     );

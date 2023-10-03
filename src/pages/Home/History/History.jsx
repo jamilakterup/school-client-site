@@ -10,7 +10,7 @@ import menu1 from "../../../assets/images/menu01.png";
 import menu2 from "../../../assets/images/menu02.png";
 import menu3 from "../../../assets/images/menu03.png";
 import menu4 from "../../../assets/images/menu04.png";
-import {ImMan, ImWoman} from "react-icons/im";
+import {BiSolidUserBadge} from "react-icons/bi";
 import {CiBoxList} from "react-icons/ci";
 import {BsArrowRightCircle, BsPersonFillCheck} from "react-icons/bs";
 import {MdOutlineHistoryEdu, MdHistoryEdu, MdCardMembership} from 'react-icons/md';
@@ -51,7 +51,7 @@ const History = () => {
                 <div className="w-full md:w-3/4">
                     <div className='md:flex md:gap-6 mt-2'>
                         <div className="w-full md:w-1/2 mb-3 md:mb-0">
-                            <p className='big-font text-xl mb-2 flex items-center gap-2 bg-slate-900 text-white p-2'><ImWoman />উপঅধ্যক্ষের বাণী</p>
+                            <p className='big-font text-xl mb-2 flex items-center gap-2 bg-slate-900 text-white p-2'><BiSolidUserBadge />উপঅধ্যক্ষের বাণী</p>
                             <div className="flex gap-3">
                                 <div className='md:w-1/4'>
                                     <img src={mam} alt="mam image" />
@@ -62,7 +62,7 @@ const History = () => {
                             </div>
                         </div>
                         <div className="w-full md:w-1/2 mb-6 md:mb-0">
-                            <p className='big-font text-xl mb-2 flex items-center gap-2 bg-slate-900 text-white p-2'><ImMan />অধ্যক্ষের বাণী</p>
+                            <p className='big-font text-xl mb-2 flex items-center gap-2 bg-slate-900 text-white p-2'><BiSolidUserBadge />অধ্যক্ষের বাণী</p>
                             <div className="flex gap-3">
                                 <div className='md:w-1/4'>
                                     <img src={sir} alt="sir image" />
@@ -123,13 +123,13 @@ const History = () => {
                                     </tr>
                                     <tr>
                                         <td className='p-2'>সারিয়া জাহান</td>
-                                        <td className='p-2'>3</td>
+                                        <td className='p-2'>৩</td>
                                         <td className='p-2'>দশম</td>
                                         <td className='p-2'>সদস্য</td>
                                     </tr>
                                     <tr>
                                         <td className='p-2'>সাদিয়া তাসনিম দিবা</td>
-                                        <td className='p-2'>1</td>
+                                        <td className='p-2'>১</td>
                                         <td className='p-2'>৯ম</td>
                                         <td className='p-2'>সদস্য</td>
                                     </tr>
