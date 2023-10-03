@@ -13,11 +13,11 @@ import menu4 from "../../../assets/images/menu04.png";
 import {ImMan, ImWoman} from "react-icons/im";
 import {CiBoxList} from "react-icons/ci";
 import {BsArrowRightCircle, BsPersonFillCheck} from "react-icons/bs";
-import {MdOutlineHistoryEdu, MdHistoryEdu} from 'react-icons/md';
+import {MdOutlineHistoryEdu, MdHistoryEdu, MdCardMembership} from 'react-icons/md';
 import {FaLink, FaDownload} from "react-icons/fa";
-import {FaLocationDot} from "react-icons/fa6";
+import {FaLocationDot, FaPersonHarassing} from "react-icons/fa6";
 import {PiStudentFill, PiDownloadThin} from "react-icons/pi";
-import {GiTeacher} from "react-icons/gi";
+import {GiTeacher, GiSwordwoman} from "react-icons/gi";
 import {SiMicrosoftacademic, SiGoogleclassroom} from "react-icons/si";
 
 
@@ -71,6 +71,70 @@ const History = () => {
                                     এ গ্রামের সম্ভ্রান্ত ধর্মভীরু মুসলিম পরিবার সমূহের মধ্যে শীর্ষস্থানে অবস্থান খান পরিবারের । বংশমর্যাদায় যেমন শ্রেষ্ঠত্বের দাবীদার তেমনি শিক্ষা-দীক্ষায় ছিলেন শিক্ষানুরাগী তেমনটি ধর্মানুরাগী এবং পরহেযগার। তাঁর দুই ছেলে সন্তান বড় ছেলের নাম মুজাম্মিল খান এবং ছোট ছেলের নাম....<Link to="" className='bg-slate-200 px-2 text-sm rounded-md text-blue-800'>বিস্তারিত</Link>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div className='md:flex md:gap-6 mt-2'>
+                        <div className="w-full md:w-1/2 mb-3 md:mb-0">
+                            <p className='medium-font text-xl mb-2 flex items-center gap-2 bg-slate-900 text-white p-2'><MdCardMembership />বর্তমান গভর্নিং বডির নামের তালিকা</p>
+                            <table className="table-auto w-full">
+                                <thead className='regular-font text-xl font-semibold text-gray-800 bg-gray-50 text-left'>
+                                    <tr>
+                                        <th className='p-2'>নাম</th>
+                                        <th className='p-2'>ক্যাটাগরি</th>
+                                        <th className='p-2'>পদবী</th>
+                                    </tr>
+                                </thead>
+                                <tbody className='extra-font text-md divide-y divide-gray-200'>
+                                    <tr>
+                                        <td className='p-2'>রফিকুল ইসলাম খোকন</td>
+                                        <td className='p-2'>চেয়ারম্যান</td>
+                                        <td className='p-2'>সভাপতি</td>
+                                    </tr>
+                                    <tr>
+                                        <td className='p-2'>শাহাদাত হোসেন চৌধুরী</td>
+                                        <td className='p-2'>দাতা</td>
+                                        <td className='p-2'>সদস্য</td>
+                                    </tr>
+                                    <tr>
+                                        <td className='p-2'>মো: আনোয়ার হোসেন</td>
+                                        <td className='p-2'>অভিভাবক</td>
+                                        <td className='p-2'>সদস্য</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div className="w-full md:w-1/2 mb-6 md:mb-0">
+                            <p className='medium-font text-xl mb-2 flex items-center gap-2 bg-slate-900 text-white p-2'><GiSwordwoman />স্টুডেন্ট কেবিনেট নামের তালিকা</p>
+                            <table className="table-auto w-full">
+                                <thead className='regular-font text-xl font-semibold text-gray-800 bg-gray-50 text-left'>
+                                    <tr>
+                                        <th className='p-2'>নাম</th>
+                                        <th className='p-2'>রোল</th>
+                                        <th className='p-2'>শ্রেণী</th>
+                                        <th className='p-2'>পদবী</th>
+                                    </tr>
+                                </thead>
+                                <tbody className='extra-font text-md divide-y divide-gray-200'>
+                                    <tr>
+                                        <td className='p-2'>রাইয়া জাহান আইমুন</td>
+                                        <td className='p-2'>২</td>
+                                        <td className='p-2'>দশম</td>
+                                        <td className='p-2'>সভাপতি</td>
+                                    </tr>
+                                    <tr>
+                                        <td className='p-2'>সারিয়া জাহান</td>
+                                        <td className='p-2'>3</td>
+                                        <td className='p-2'>দশম</td>
+                                        <td className='p-2'>সদস্য</td>
+                                    </tr>
+                                    <tr>
+                                        <td className='p-2'>সাদিয়া তাসনিম দিবা</td>
+                                        <td className='p-2'>1</td>
+                                        <td className='p-2'>৯ম</td>
+                                        <td className='p-2'>সদস্য</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                     <img src={mujibCorner} alt="mujib corner image" className='mt-12' />
@@ -158,6 +222,35 @@ const History = () => {
                         <Link to="" className="regular-font">যতদূর জানা যায় মরহুম দেলওয়ার খান ছিলেন এ পরিবারের একজন শিক্ষিত ব্যক্তি । তিনি যেমন ছিলেন শিক্ষানুরাগী তেমনটি</Link>
                     </Marquee>
 
+                    {/* harasment team details================= */}
+                    <p className='regular-font bg-slate-900 text-white p-2 text-xl flex items-center gap-2'><FaPersonHarassing /> যৌন হয়রানী প্রিতিরোধ কমিটি </p>
+                    <table className="table-auto w-full">
+                        <thead className='regular-font text-md font-semibold text-gray-800 bg-gray-50 text-left'>
+                            <tr>
+                                <th className='p-2'>নাম</th>
+                                <th className='p-2'>ক্যাটাগরি</th>
+                                <th className='p-2'>পদবী</th>
+                            </tr>
+                        </thead>
+                        <tbody className='extra-font text-sm divide-y divide-gray-200'>
+                            <tr>
+                                <td className='p-2'>রাইয়া জাহান আইমুন</td>
+                                <td className='p-2'>সিনিয়র শিক্ষক ইংরেজী</td>
+                                <td className='p-2'>আহবায়ক</td>
+                            </tr>
+                            <tr>
+                                <td className='p-2'>সারিয়া জাহান</td>
+                                <td className='p-2'>অভিভাবক সদস্য</td>
+                                <td className='p-2'>সদস্য</td>
+                            </tr>
+                            <tr>
+                                <td className='p-2'>সাদিয়া তাসনিম দিবা</td>
+                                <td className='p-2'>মহিলা অভিভাবক সদস্য</td>
+                                <td className='p-2'>সদস্য</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
                     {/* important links =================== */}
                     <p className='regular-font bg-slate-900 text-white p-2 text-xl  flex items-center gap-2'><FaLink />গুরুত্বপূর্ণ লিংক</p>
 
@@ -168,7 +261,7 @@ const History = () => {
 
                     <div className='p-2 bg-slate-200'>
                         <Link to="" className='sad-font p-2 text-xl flex items-center gap-2  hover:bg-slate-100 duration-300'><BsArrowRightCircle /> এডুকেশন ফলাফল</Link>
-                        <Link to="" className='sad-font p-2 text-xl flex items-center gap-2  hover:bg-slate-100 duration-300'><BsArrowRightCircle /> এডুকেশন ফলাফল</Link>
+                        <Link to="" className='sad-font p-2 text-xl flex items-center gap-2  hover:bg-slate-100 duration-300'><BsArrowRightCircle /> বোর্ড ফলাফল</Link>
                     </div>
 
                     {/* location of our school============================ */}

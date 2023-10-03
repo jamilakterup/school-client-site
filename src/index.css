@@ -130,6 +130,10 @@ h4 {
   font-size: 24px;
 }
 
+h5 {
+  font-size: 20px;
+}
+
 /* custom container and other global style with responsive size==================== */
 
 .my-container {
