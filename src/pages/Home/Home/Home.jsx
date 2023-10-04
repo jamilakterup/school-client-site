@@ -6,6 +6,7 @@ import TeacherSection from "../TeacherSection/TeacherSection";
 import BrightStudent from "../BrightStudent/BrightStudent";
 import VideoGallery from "../VideoGallery/VideoGallery";
 import PhotoGallery from "../PhotoGallery/PhotoGallery";
+import BlogSection from "../BlogSection/BlogSection";
 
 const Home = () => {
     return (
@@ -21,6 +22,7 @@ const Home = () => {
                 <BrightStudent />
                 <VideoGallery />
                 <PhotoGallery />
+                <BlogSection />
             </section>
         </>
     );
