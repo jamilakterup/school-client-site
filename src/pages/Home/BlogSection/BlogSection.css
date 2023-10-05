@@ -1,0 +1,127 @@
+.blog-card img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 8px solid #eff8f7;
+    margin: 0 auto;
+    transform: translateY(50px);
+    position: relative;
+    z-index: 1;
+}
+
+.blog-card::after {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    top: 100px;
+    left: 581px;
+    border-radius: 50%;
+    box-shadow: 10px -7px 0 #eff8f7;
+}
+
+.blog-card::before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    top: 100px;
+    left: 697px;
+    border-radius: 50%;
+    box-shadow: -10px -7px 0 #eff8f7;
+    z-index: 1;
+}
+
+.blog-card-body {
+    position: relative;
+    background-color: #0f172a;
+    padding: 50px 20px;
+    border-radius: 0 80px 0 70px;
+    color: #eff8f7;
+}
+
+
+
+
+@media only screen and (max-width: 1280px) {
+    .blog-card::after {
+        left: 523px;
+    }
+
+    .blog-card::before {
+        left: 639px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .blog-card::after {
+        left: 400px;
+    }
+
+    .blog-card::before {
+        left: 515px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .blog-card::after {
+        left: 282px;
+    }
+
+    .blog-card::before {
+        left: 398px;
+    }
+}
+
+@media only screen and (max-width: 688px) {
+    .blog-card::after {
+        left: 242px;
+    }
+
+    .blog-card::before {
+        left: 358px;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .blog-card::after {
+        left: 117px;
+    }
+
+    .blog-card::before {
+        left: 232px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .blog-card::after {
+        left: 97px;
+    }
+
+    .blog-card::before {
+        left: 213px;
+    }
+}
+
+@media only screen and (max-width: 393px) {
+    .blog-card::after {
+        left: 106px;
+    }
+
+    .blog-card::before {
+        left: 222px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .blog-card::after {
+        left: 90px;
+    }
+
+    .blog-card::before {
+        left: 206px;
+    }
+}
+
+
+/* custom container and other global style==================== */

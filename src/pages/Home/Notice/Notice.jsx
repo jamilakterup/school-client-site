@@ -27,7 +27,7 @@ const Notice = () => {
             </Marquee>
 
 
-            <p className="notice extra-font text-sm md:text-xl py-2 px-4 absolute top-0 translate-y-0 md:-translate-y-2 z-10">জরুরী ঘোষণা :</p>
+            <p className="notice extra-font text-sm md:text-xl py-2 px-4 absolute top-0 -translate-y-[6px] md:-translate-y-2 z-10">জরুরী ঘোষণা :</p>
         </section>
     );
 };

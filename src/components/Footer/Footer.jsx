@@ -15,76 +15,75 @@ const Footer = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
                                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
                             </svg>
-                            <span className="ml-3 text-xl">Tailblocks</span>
+                            <span className="ml-3 text-xl">BMHS</span>
                         </a>
-                        <p className="mt-2 text-sm text-gray-500">Air plant banjo lyft occupy retro adaptogen indego</p>
+                        <p className="mt-2 text-sm text-gray-500 regular-font">শিক্ষা, শান্তি, প্রগতি, দেশের হবে উন্নতি।</p>
                     </div>
-                    <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+                    <div className="flex-grow flex flex-wrap md:pr-2 xl:pr-0 xl:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
                         <div className="lg:w-1/4 sm:w-1/2 w-full px-4">
-                            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-                            <nav className="list-none mb-10">
+                            <h2 className="title-font font-medium text-gray-900 tracking-widest text-base mb-3 big-font">একাডেমিক লিংক</h2>
+                            <nav className="list-none mb-10 primary-font">
                                 <li>
-                                    <a className="text-gray-600 hover:text-gray-800">First Link</a>
+                                    <a className="text-gray-600 hover:text-gray-800">প্রতিষ্ঠানের ইতিহাস</a>
                                 </li>
                                 <li>
-                                    <a className="text-gray-600 hover:text-gray-800">Second Link</a>
+                                    <a className="text-gray-600 hover:text-gray-800">শিক্ষকমণ্ডলী</a>
                                 </li>
                                 <li>
-                                    <a className="text-gray-600 hover:text-gray-800">Third Link</a>
+                                    <a className="text-gray-600 hover:text-gray-800">শিক্ষার্থী</a>
                                 </li>
                                 <li>
-                                    <a className="text-gray-600 hover:text-gray-800">Fourth Link</a>
+                                    <a className="text-gray-600 hover:text-gray-800">ক্লাস রুটিন</a>
                                 </li>
                             </nav>
                         </div>
                         <div className="lg:w-1/4 sm:w-1/2 w-full px-4">
-                            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-                            <nav className="list-none mb-10">
+                            <h2 className="title-font font-medium text-gray-900 tracking-widest text-base mb-3 big-font">একাডেমিক লিংক</h2>
+                            <nav className="list-none mb-10 primary-font">
                                 <li>
-                                    <a className="text-gray-600 hover:text-gray-800">First Link</a>
+                                    <a className="text-gray-600 hover:text-gray-800"></a>
                                 </li>
                                 <li>
-                                    <a className="text-gray-600 hover:text-gray-800">Second Link</a>
+                                    <a className="text-gray-600 hover:text-gray-800">মুজিব কর্নার</a>
                                 </li>
                                 <li>
-                                    <a className="text-gray-600 hover:text-gray-800">Third Link</a>
+                                    <a className="text-gray-600 hover:text-gray-800">একাডেমীক ক্যালেন্ডার</a>
                                 </li>
                                 <li>
-                                    <a className="text-gray-600 hover:text-gray-800">Fourth Link</a>
-                                </li>
-                            </nav>
-                        </div>
-                        <div className="lg:w-1/4 sm:w-1/2 w-full px-4">
-                            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-                            <nav className="list-none mb-10">
-                                <li>
-                                    <a className="text-gray-600 hover:text-gray-800">First Link</a>
+                                    <a className="text-gray-600 hover:text-gray-800">ফটো গ্যালারি</a>
                                 </li>
                                 <li>
-                                    <a className="text-gray-600 hover:text-gray-800">Second Link</a>
-                                </li>
-                                <li>
-                                    <a className="text-gray-600 hover:text-gray-800">Third Link</a>
-                                </li>
-                                <li>
-                                    <a className="text-gray-600 hover:text-gray-800">Fourth Link</a>
+                                    <a className="text-gray-600 hover:text-gray-800">নোটিশ</a>
                                 </li>
                             </nav>
                         </div>
                         <div className="lg:w-1/4 sm:w-1/2 w-full px-4">
-                            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-                            <nav className="list-none mb-10">
+                            <h2 className="title-font font-medium text-gray-900 tracking-widest text-base mb-3 big-font">অন্যান্য লিংক</h2>
+                            <nav className="list-none mb-10 primary-font">
                                 <li>
-                                    <a className="text-gray-600 hover:text-gray-800">First Link</a>
+                                    <a className="text-gray-600 hover:text-gray-800">প্রধানমন্ত্রীর কার্যালয়</a>
                                 </li>
                                 <li>
-                                    <a className="text-gray-600 hover:text-gray-800">Second Link</a>
+                                    <a className="text-gray-600 hover:text-gray-800">শিক্ষা বোর্ড</a>
                                 </li>
                                 <li>
-                                    <a className="text-gray-600 hover:text-gray-800">Third Link</a>
+                                    <a className="text-gray-600 hover:text-gray-800">ই-শিক্ষা</a>
+                                </li>
+                            </nav>
+                        </div>
+                        <div className="lg:w-1/4 sm:w-1/2 w-full px-4">
+                            <h2 className="title-font font-medium text-gray-900 tracking-widest text-base mb-3 big-font">যোগাযোগ</h2>
+                            <nav className="list-none mb-10 regular-font">
+                                <li className="leading-5">
+                                    <p className="big-font">প্রধান শিক্ষক</p>
+                                    <p>বড়নলা হাইস্কুল</p>
+                                    <a className="text-gray-600 hover:text-gray-800">ফোনঃ ০১৭৯০-৩৯৮৭১৯</a>
                                 </li>
                                 <li>
-                                    <a className="text-gray-600 hover:text-gray-800">Fourth Link</a>
+                                    <a className="text-gray-600 hover:text-gray-800">ইমাইলঃ bornola.hs@gmail.com</a>
+                                </li>
+                                <li>
+                                    <a className="text-gray-600 hover:text-gray-800 flex-wrap">ফেসবুকঃ  https://facebook.com/bmhs</a>
                                 </li>
                             </nav>
                         </div>
@@ -92,10 +91,10 @@ const Footer = () => {
                 </div>
                 <div className="bg-gray-100">
                     <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-                        <p className="text-gray-500 text-sm text-center sm:text-left">© 2020 Tailblocks —
-                            <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" className="text-gray-600 ml-1" target="_blank">@knyttneve</a>
+                        <p className="text-gray-500 text-sm text-center sm:text-left">All ©opyright reserved by jamil akter, 2023 —
+                            <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" className="text-gray-600 ml-1" target="_blank">jamilakterup@gmail.com</a>
                         </p>
-                        <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+                        <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 md:pe-8 justify-center sm:justify-start">
                             <a className="text-gray-500">
                                 <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
                                     <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>

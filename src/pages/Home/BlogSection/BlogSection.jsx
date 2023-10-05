@@ -1,5 +1,6 @@
 import {Swiper, SwiperSlide} from "swiper/react";
 import SwiperCore, {EffectFade, Pagination, Autoplay} from "swiper";
+import "./BlogSection.css";
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-fade';
@@ -9,9 +10,6 @@ import 'swiper/css/pagination';
 import blogImg from "../../../assets/images/blog-line.png";
 import swip1 from "../../../assets/images/students/st1.jpg";
 import swip2 from "../../../assets/images/students/st2.jpg";
-import swip3 from "../../../assets/images/students/st3.jpg";
-import swip4 from "../../../assets/images/students/st4.jpg";
-import swip5 from "../../../assets/images/students/st5.jpg";
 import {Link} from "react-router-dom";
 
 // import required modules
@@ -32,26 +30,24 @@ const BlogSection = () => {
                 }}
                 modules={[EffectFade, Pagination, Autoplay]}
                 autoplay={{
-                    delay: 2500,
+                    delay: 4000,
                     disableOnInteraction: false,
                     reverseDirection: true
                 }}
-                className="mySwiper mt-12"
             >
-                <SwiperSlide>
-                    <div className="h-full card-body regular-font">
-                        <span className="result"><strong className="gpa">GPA 4.00</strong></span>
+                <SwiperSlide className="blog-card">
+                    <img src={swip1} alt="" />
+                    <div className="blog-card-body regular-font">
                         <li>নামঃ মোঃ রুবেল আলি</li>
                         <li>শ্রেণীঃ দশম (ক)</li>
-                        <li>বিভাগঃ বিজ্ঞান</li>
-                        <li>শিক্ষাবর্ষঃ ২০১৩-১৪</li>
+                        <li>শিক্ষাবর্ষঃ ২০১৩-১৪ সমূহের মধ্যে শীর্ষস্থানে অবস্থান খান পরিবারের । বংশমর্যাদায় যেমন শ্রেষ্ঠত্বের দাবীদার তেমনি শিক্ষা-দীক্ষায়, ধর্মভীরুতায়সামাজিক আচার-অনুষ্ঠানে এ জনপদের অন্য সবের উপর রয়েছে এ পরিবারের অতুলনীয় সম্মান। যতদূর জানা যায় মরহুম দেলওয়ার খান ছিলে....<Link to="" className='bg-slate-100 px-2 text-sm rounded-md text-gray-900'>বিস্তারিত</Link></li>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide >
-                    <div className="h-full card-body regular-font">
-                        <span className="result"><strong className="gpa">GPA 5.00</strong></span>
+                <SwiperSlide className="blog-card">
+                    <img src={swip2} alt="" />
+                    <div className="blog-card-body regular-font">
                         <li>নামঃ মোঃ য়ারিফুল ইসলাম</li>
-                        <li>এ গ্রামের সম্ভ্রান্ত ধর্মভীরু মুসলিম পরিবার সমূহের মধ্যে শীর্ষস্থানে অবস্থান খান পরিবারের । বংশমর্যাদায় যেমন শ্রেষ্ঠত্বের দাবীদার তেমনি শিক্ষা-দীক্ষায়, ধর্মভীরুতায়সামাজিক আচার-অনুষ্ঠানে এ জনপদের অন্য সবের উপর রয়েছে এ পরিবারের অতুলনীয় সম্মান। যতদূর জানা যায় মরহুম দেলওয়ার খান ছিলেন এ পরিবারের একজন শিক্ষিত ব্যক্তি ।তিনি যেমন ছিলেন শিক্ষানুরাগী তেমনটি ধর্মানুরাগী এবং পরহেযগার। তাঁর দুই ছেলে সন্তান বড় ছেলের নাম মুজাম্মিল খান</li>
+                        <li>এ গ্রামের সম্ভ্রান্ত ধর্মভীরু মুসলিম পরিবার সমূহের মধ্যে শীর্ষস্থানে অবস্থান খান পরিবারের । বংশমর্যাদায় যেমন শ্রেষ্ঠত্বের দাবীদার তেমনি শিক্ষা-দীক্ষায়, ধর্মভীরুতায়সামাজিক আচার-অনুষ্ঠানে এ জনপদের অন্য সবের উপর রয়েছে এ পরিবারের অতুলনীয় সম্মান। যতদূর জানা যায় মরহুম দেলওয়ার খান ছিলেন এ পরিবারের একজন শিক্ষিত ব্যক্তি ।তিনি যেমন ছিলেন শিক্ষানুরাগী তেমনটি ধর্মানুরাগী এবং পরহেযগার। তাঁর দুই ছেলে সন্তান বড় ছেলের নাম মুজাম্মিল খান....<Link to="" className='bg-slate-100 px-2 text-sm rounded-md text-gray-900'>বিস্তারিত</Link></li>
                     </div>
                 </SwiperSlide>
             </Swiper>
