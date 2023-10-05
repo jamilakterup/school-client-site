@@ -53,10 +53,10 @@ const History = () => {
                         <div className="w-full md:w-1/2 mb-3 md:mb-0">
                             <p className='big-font text-xl mb-2 flex items-center gap-2 bg-slate-900 text-white p-2'><BiSolidUserBadge />উপঅধ্যক্ষের বাণী</p>
                             <div className="flex gap-3">
-                                <div className='md:w-1/4'>
+                                <div className='md:w-1/4 w-1/3'>
                                     <img src={mam} alt="mam image" />
                                 </div>
-                                <div className='md:w-3/4 curly-font'>
+                                <div className='md:w-3/4 w-2/3 curly-font'>
                                     এ গ্রামের সম্ভ্রান্ত ধর্মভীরু মুসলিম পরিবার সমূহের মধ্যে শীর্ষস্থানে অবস্থান খান পরিবারের । বংশমর্যাদায় যেমন শ্রেষ্ঠত্বের দাবীদার তেমনি শিক্ষা-দীক্ষায় ছিলেন শিক্ষানুরাগী তেমনটি ধর্মানুরাগী এবং পরহেযগার। তাঁর দুই ছেলে সন্তান বড় ছেলের নাম মুজাম্মিল খান এবং ছোট ছেলের নাম....<Link to="" className='bg-slate-200 px-2 text-sm rounded-md text-blue-800'>বিস্তারিত</Link>
                                 </div>
                             </div>
@@ -64,10 +64,10 @@ const History = () => {
                         <div className="w-full md:w-1/2 mb-6 md:mb-0">
                             <p className='big-font text-xl mb-2 flex items-center gap-2 bg-slate-900 text-white p-2'><BiSolidUserBadge />অধ্যক্ষের বাণী</p>
                             <div className="flex gap-3">
-                                <div className='md:w-1/4'>
+                                <div className='md:w-1/4 w-1/3'>
                                     <img src={sir} alt="sir image" />
                                 </div>
-                                <div className='md:w-3/4 curly-font'>
+                                <div className='md:w-3/4 w-2/3 curly-font'>
                                     এ গ্রামের সম্ভ্রান্ত ধর্মভীরু মুসলিম পরিবার সমূহের মধ্যে শীর্ষস্থানে অবস্থান খান পরিবারের । বংশমর্যাদায় যেমন শ্রেষ্ঠত্বের দাবীদার তেমনি শিক্ষা-দীক্ষায় ছিলেন শিক্ষানুরাগী তেমনটি ধর্মানুরাগী এবং পরহেযগার। তাঁর দুই ছেলে সন্তান বড় ছেলের নাম মুজাম্মিল খান এবং ছোট ছেলের নাম....<Link to="" className='bg-slate-200 px-2 text-sm rounded-md text-blue-800'>বিস্তারিত</Link>
                                 </div>
                             </div>
