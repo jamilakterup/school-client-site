@@ -1,0 +1,44 @@
+.login-btn {
+    position: relative;
+    border: 2px ridge #149CEA;
+    outline: none;
+    background-color: transparent;
+    color: #4d4b4b;
+    transition: 1s;
+    border-radius: 0.3em;
+    font-weight: bold;
+}
+
+.login-btn::after {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: #EFF8F7;
+    transition: 0.5s;
+    transform-origin: center;
+}
+
+.login-btn::before {
+    content: "";
+    transform-origin: center;
+    position: absolute;
+    top: 80%;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: #EFF8F7;
+    transition: 0.5s;
+}
+
+.login-btn:hover::before,
+.login-btn:hover::after {
+    transform: scale(0)
+}
+
+.login-btn:hover {
+    box-shadow: inset 0px 0px 25px #1479EA;
+    color: white;
+}

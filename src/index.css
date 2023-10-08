@@ -134,6 +134,11 @@ h5 {
   font-size: 20px;
 }
 
+p,
+label {
+  font-size: 16px;
+}
+
 /* custom container and other global style with responsive size==================== */
 
 .my-container {
@@ -203,6 +208,10 @@ h5 {
     font-size: 14px;
   }
 
+  p,
+  label {
+    font-size: 14px;
+  }
 }
 
 @media only screen and (max-width: 640px) {
@@ -229,6 +238,38 @@ h5 {
 
   h5 {
     font-size: 14px;
+  }
+
+  p,
+  label {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .my-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  h5 {
+    font-size: 10px;
   }
 
 }

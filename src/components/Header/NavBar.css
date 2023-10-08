@@ -1,5 +1,7 @@
 ul li {
     position: relative;
+    color: #0F172A;
+    transition: all ease-in-out 0.3s;
 }
 
 ul>li>a,
@@ -9,6 +11,18 @@ li>span,
     padding: 10px 20px;
     display: block;
     font-family: var(--primary-font);
+}
+
+ul li:hover {
+    color: #2371ad;
+}
+
+ul ul li {
+    color: #fff;
+}
+
+ul ul li:hover {
+    color: #58b7ff;
 }
 
 .home-link {
@@ -64,7 +78,7 @@ ul li a::after {
     content: '';
     width: 0%;
     height: 3px;
-    background: #05cdff;
+    background: #2371ad;
     display: block;
     transition: 0.5s;
 }

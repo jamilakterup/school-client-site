@@ -10,12 +10,16 @@ const MainLayout = () => {
     return (
         <>
             <ScrollRestoration />
+
             {location?.pathname === '/' && <img src={topImage} alt="top image" className="w-full" />}
-            <NavBar />
+            {location?.pathname === '/login' || location?.pathname === '/register' || <NavBar />}
+
             <div className="min-h-[calc(100vh-100px)]">
                 <Outlet />
             </div>
-            <Footer />
+
+            {location?.pathname === '/login' || location?.pathname === '/register' || <Footer />}
+
             <ScrollToTop smooth top={500} className="ps-[5px] hover:bg-slate-100 duration-100" />
         </>
     );

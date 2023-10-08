@@ -40,16 +40,23 @@ const MenuOption = () => {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
             >
+                <Link to="">
+                    <MenuItem onClick={handleCloseUserMenu}>
+                        <Typography textAlign="left"><span className='flex items-center gap-2 text-sm'><MdEmail /> প্রোফাইল </span></Typography>
+                    </MenuItem>
+                </Link>
 
-                <MenuItem onClick={handleCloseUserMenu}>
-                    <Typography textAlign="left"><Link to=""><span className='flex items-center gap-2 text-sm'><MdEmail /> প্রোফাইল </span></Link></Typography>
-                </MenuItem>
-                <MenuItem onClick={handleCloseUserMenu}>
-                    <Typography textAlign="left"><Link to=""><span className='flex items-center gap-2 text-sm'><MdOutlineSpaceDashboard /> ড্যাশবোর্ড </span></Link></Typography>
-                </MenuItem>
-                <MenuItem onClick={handleCloseUserMenu}>
-                    <Typography textAlign="left"><Link to=""><span className='flex items-center gap-2 text-sm'><MdLogout /> লগআউট </span></Link></Typography>
-                </MenuItem>
+                <Link to="">
+                    <MenuItem onClick={handleCloseUserMenu}>
+                        <Typography textAlign="left"><span className='flex items-center gap-2 text-sm'><MdOutlineSpaceDashboard /> ড্যাশবোর্ড </span></Typography>
+                    </MenuItem>
+                </Link>
+
+                <Link to="/login">
+                    <MenuItem onClick={handleCloseUserMenu}>
+                        <Typography textAlign="left"><span className='flex items-center gap-2 text-sm'><MdLogout /> লগইন </span></Typography>
+                    </MenuItem>
+                </Link>
             </Menu>
         </Box>
     );

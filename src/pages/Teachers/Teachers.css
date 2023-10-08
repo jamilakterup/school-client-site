@@ -1,0 +1,13 @@
+.custom-mui-btn {
+    & .MuiButton-root {
+        color: #4b4a4a;
+        border-color: #aaaaaa3f;
+        font-family: var(--big-font);
+    }
+}
+
+.custom-mui-btn:hover {
+    & .MuiButton-root {
+        border-color: #85858569;
+    }
+}

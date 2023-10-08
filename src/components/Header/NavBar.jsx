@@ -46,44 +46,45 @@ const NavBar = () => {
 
     return (
         <>
-            <nav id="navbar" ref={navBarRef} style={{transition: 'top 0.3s'}} className='my-container sticky top-0 text-xl flex justify-between items-center backdrop-blur-md z-50'>
+            <nav id="navbar" ref={navBarRef} style={{transition: 'top 0.3s'}} className='my-container sticky top-0 text-xl flex justify-between items-center backdrop-blur-md z-50 border-b shadow-sm'>
                 <img src={Logo} alt="logo" className="w-32 -ml-[12px] md:hidden block" />
 
                 <ul className="hidden md:flex flex-wrap justify-start items-center">
                     <li><NavLink to="" className="ps-0"><span className="flex items-center gap-1"><FaHome />হোম</span></NavLink></li>
                     <li><span className="flex items-center gap-1">প্রতিষ্ঠানের তথ্য <BiSolidChevronDown /></span>
                         <ul>
-                            <li><NavLink to="">প্রতিষ্ঠানের ইতিহাস</NavLink></li>
-                            <li><NavLink to="">প্রতিষ্ঠানের অনুমতি ও স্বীকৃতি</NavLink></li>
-                            <li><NavLink to="">এমপিও এবং জাতীয়করণ তথ্য</NavLink></li>
-                            <li><NavLink to="">শ্রেণী ও লিঙ্গভিত্তিক শিক্ষার্থীর তথ্য</NavLink></li>
-                            <li><NavLink to="">শ্রেণীভিত্তিক অনুমোদিত শাখা</NavLink></li>
+                            <li><NavLink to="/history">প্রতিষ্ঠানের ইতিহাস</NavLink></li>
+                            <li><NavLink to="/acknowledgement">প্রতিষ্ঠানের অনুমতি ও স্বীকৃতি</NavLink></li>
+                            <li><NavLink to="/mpo">এমপিও এবং জাতীয়করণ তথ্য</NavLink></li>
+                            <li><NavLink to="/student-info">শ্রেণী ও লিঙ্গভিত্তিক শিক্ষার্থীর তথ্য</NavLink></li>
+                            <li><NavLink to="/available-section">শ্রেণীভিত্তিক অনুমোদিত শাখা</NavLink></li>
                         </ul>
                     </li>
                     <li>
                         <span className="flex items-center gap-1">শিক্ষকমন্ডলী <BiSolidChevronDown /></span>
                         <ul>
-                            <li><NavLink to="">জেনারেল</NavLink></li>
-                            <li><NavLink to="">ভোকেশনাল</NavLink></li>
-                            <li><NavLink to="">স্টাফ</NavLink></li>
+                            <li><NavLink to='/teachers/general'>জেনারেল</NavLink></li>
+                            <li><NavLink to='/teachers/vocational'>ভোকেশনাল</NavLink></li>
+                            <li><NavLink to='/teachers/stuff'>স্টাফ</NavLink></li>
+                            <li><NavLink to='/teachers/all'>সকল</NavLink></li>
                         </ul>
                     </li>
-                    <li><NavLink to="">শিক্ষার্থী</NavLink></li>
-                    <li><NavLink to="">ফটো</NavLink></li>
-                    <li><NavLink to="">ভিডিও</NavLink></li>
-                    <li><NavLink to="">তথ্য</NavLink></li>
-                    <li><NavLink to="">ক্লাসরুটিন</NavLink></li>
+                    <li><NavLink to="/student-page">শিক্ষার্থী</NavLink></li>
+                    <li><NavLink to="/photo-gallery">ফটো</NavLink></li>
+                    <li><NavLink to="/video-gallery">ভিডিও</NavLink></li>
+                    <li><NavLink to="/information">তথ্য</NavLink></li>
+                    <li><NavLink to="/class-routine">ক্লাসরুটিন</NavLink></li>
                     <li>
                         <span className="flex items-center gap-1">অন্যান্য <BiSolidChevronDown /></span>
                         <ul>
-                            <li><NavLink to="">মুজিব কর্ণার</NavLink></li>
-                            <li><NavLink to="">সকল তথ্য</NavLink></li>
-                            <li><NavLink to="">নোটিশ</NavLink></li>
-                            <li><NavLink to="">একাডেমিক ক্যালেন্ডার</NavLink></li>
+                            <li><NavLink to="/mujib-corner">মুজিব কর্ণার</NavLink></li>
+                            <li><NavLink to="/all-info">সকল তথ্য</NavLink></li>
+                            <li><NavLink to="/all-notice">নোটিশ</NavLink></li>
+                            <li><NavLink to="/academic-calender">একাডেমিক ক্যালেন্ডার</NavLink></li>
                         </ul>
                     </li>
-                    <li><NavLink to="">ব্লগ</NavLink></li>
-                    <li><NavLink to="">যোগাযোগ</NavLink></li>
+                    <li><NavLink to="/blog">ব্লগ</NavLink></li>
+                    <li><NavLink to="/contact">যোগাযোগ</NavLink></li>
                 </ul>
 
                 <div className="flex gap-8 items-center">
