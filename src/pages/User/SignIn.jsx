@@ -5,11 +5,13 @@ import {Link} from "react-router-dom";
 import {Button, Divider, TextField} from '@mui/material';
 import {PiEyeThin, PiEyeClosed} from "react-icons/pi";
 import {FcGoogle} from "react-icons/fc";
+import {useContext, useState} from "react";
+import {AuthContext} from "../../utils/providers/AuthProvider";
+
 
 // formic style=========
 import {useFormik} from 'formik';
 import * as yup from 'yup';
-import {useState} from "react";
 
 const validationSchema = yup.object({
     email: yup
@@ -24,7 +26,20 @@ const validationSchema = yup.object({
 
 const SignIn = () => {
     const [showText, setShowText] = useState(false);
+    const {loginUser, loginWithGoogle} = useContext(AuthContext)
 
+    const handleGoogleLogin = () => {
+        loginWithGoogle()
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch(err => {
+                console.log(err)
+            });
+    }
+
+    // formik function===========
     const formik = useFormik({
         initialValues: {
             email: '',
@@ -32,7 +47,14 @@ const SignIn = () => {
         },
         validationSchema: validationSchema,
         onSubmit: (values) => {
-            console.log(values);
+            loginUser(values.email, values.password)
+                .then(userCredential => {
+                    const user = userCredential.user;
+                    console.log(user);
+                })
+                .catch(err => {
+                    console.log(err)
+                });
         },
     });
 
@@ -87,7 +109,7 @@ const SignIn = () => {
                 </form>
                 <Divider>OR</Divider>
                 <div className="mt-4">
-                    <Button variant="elevated" fullWidth className="shadow-md" startIcon={<FcGoogle />}>Google login</Button>
+                    <Button onClick={handleGoogleLogin} variant="elevated" fullWidth className="shadow-md" startIcon={<FcGoogle />}>Google login</Button>
                 </div>
                 <p className="text-xs mt-5">Don't have account? <Link to="/register" className="hover:text-blue-700 underline">Sign Up</Link></p>
             </div>
