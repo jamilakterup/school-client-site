@@ -1,12 +1,13 @@
 import "./SignIn.css";
 import Lottie from "lottie-react";
 import loginAnimation from "../../assets/lottie/animation_lmuto4rl.json";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {Button, Divider, TextField} from '@mui/material';
 import {PiEyeThin, PiEyeClosed} from "react-icons/pi";
 import {FcGoogle} from "react-icons/fc";
 import {useContext, useRef, useState} from "react";
 import {AuthContext} from "../../utils/providers/AuthProvider";
+import {FaFacebookF} from "react-icons/fa";
 
 
 // formic style=========
@@ -26,19 +27,33 @@ const validationSchema = yup.object({
 
 const SignIn = () => {
     const [showText, setShowText] = useState(false);
-    const {loginUser, loginWithGoogle, resetPassword} = useContext(AuthContext);
+    const {loginUser, loginWithGoogle, resetPassword, loginWithFacebook} = useContext(AuthContext);
     const emailRef = useRef();
+    const navigate = useNavigate();
 
     const handleGoogleLogin = () => {
         loginWithGoogle()
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                navigate('/')
             })
             .catch(err => {
                 console.log(err)
             });
     }
+
+    const handleFacebookLogin = () => {
+        loginWithFacebook()
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                navigate('/')
+            })
+            .catch(err => {
+                console.log(err);
+            })
+    };
 
     // formik function===========
     const formik = useFormik({
@@ -52,6 +67,8 @@ const SignIn = () => {
                 .then(userCredential => {
                     const user = userCredential.user;
                     console.log(user);
+                    navigate('/');
+
                     if (!user.emailVerified) {
                         window.alert('Email is not verified')
                     }
@@ -133,9 +150,15 @@ const SignIn = () => {
                     <button type="submit" className="btn w-full p-[6px] my-6">Login</button>
                 </form>
                 <Divider>OR</Divider>
-                <div className="mt-4">
-                    <Button onClick={handleGoogleLogin} variant="elevated" fullWidth className="shadow-md" startIcon={<FcGoogle />}>Google login</Button>
+                <div className="mt-6 md:flex gap-4">
+                    <div className="w-full">
+                        <Button onClick={handleGoogleLogin} variant="elevated" fullWidth className="shadow-md" startIcon={<FcGoogle />}>Google login</Button>
+                    </div>
+                    <div className="w-full md:mt-0 mt-6">
+                        <Button onClick={handleFacebookLogin} variant="contained" fullWidth className="shadow-md" startIcon={<FaFacebookF className="text-white" />}>Facebook login</Button>
+                    </div>
                 </div>
+
                 <p className="text-xs mt-5">Don't have account? <Link to="/register" className="text-blue-600 underline">Sign Up</Link></p>
             </div>
         </section>

@@ -1,9 +1,10 @@
 import Lottie from "lottie-react";
 import loginAnimation from "../../assets/lottie/animation_lmutt4s2.json";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {Button, Divider, TextField} from '@mui/material';
 import {PiEyeThin, PiEyeClosed} from "react-icons/pi";
 import {FcGoogle} from "react-icons/fc";
+import {FaFacebookF} from "react-icons/fa";
 
 import {useFormik} from 'formik';
 import * as yup from 'yup';
@@ -40,18 +41,32 @@ const validationSchema = yup.object({
 const Register = () => {
     const [showText, setShowText] = useState(false);
     const [showConfirmText, setShowConfirmText] = useState(false);
-    const {registerUser, loginWithGoogle, updateUserName, verifyEmail} = useContext(AuthContext);
+    const {registerUser, loginWithGoogle, updateUserName, verifyEmail, loginWithFacebook} = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const handleGoogleLogin = () => {
         loginWithGoogle()
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                navigate('/');
             })
             .catch(err => {
                 console.log(err)
             });
-    }
+    };
+
+    const handleFacebookLogin = () => {
+        loginWithFacebook()
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                navigate('/');
+            })
+            .catch(err => {
+                console.log(err);
+            })
+    };
 
     // formic function===========
     const formik = useFormik({
@@ -70,7 +85,11 @@ const Register = () => {
 
                     verifyEmail(user)
                         .then(() => {
-                            window.alert('email verification send')
+                            if (user.emailVerified) {
+                                navigate('/');
+                            } else {
+                                window.alert('Please verify your email before continuing.');
+                            }
                         })
                         .catch(err => {
                             console.log(err);
@@ -165,9 +184,15 @@ const Register = () => {
                 </form>
 
                 <Divider>OR</Divider>
-                <div className="mt-6">
-                    <Button onClick={handleGoogleLogin} variant="elevated" fullWidth className="shadow-md" startIcon={<FcGoogle />}>Google login</Button>
+                <div className="mt-6 md:flex gap-4">
+                    <div className="w-full">
+                        <Button onClick={handleGoogleLogin} variant="elevated" fullWidth className="shadow-md" startIcon={<FcGoogle />}>Google login</Button>
+                    </div>
+                    <div className="w-full md:mt-0 mt-6">
+                        <Button onClick={handleFacebookLogin} variant="contained" fullWidth className="shadow-md" startIcon={<FaFacebookF className="text-white" />}>Facebook login</Button>
+                    </div>
                 </div>
+
                 <p className="text-xs mt-5">Already have an account? <Link to="/login" className="hover:text-blue-700 underline">Login</Link></p>
             </div>
         </section>

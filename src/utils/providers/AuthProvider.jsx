@@ -1,5 +1,5 @@
 import {createContext, useEffect, useState} from "react";
-import {GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, sendEmailVerification, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile} from "firebase/auth";
+import {FacebookAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, sendEmailVerification, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile} from "firebase/auth";
 import {app} from "../../config/firebase.config";
 
 
@@ -7,6 +7,7 @@ import {app} from "../../config/firebase.config";
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
+const facebookProvider = new FacebookAuthProvider();
 
 
 
@@ -32,6 +33,11 @@ const AuthProvider = ({children}) => {
     const loginWithGoogle = () => {
         setLoading(true);
         return signInWithPopup(auth, googleProvider);
+    };
+
+    // login and register user with facebook===========
+    const loginWithFacebook = () => {
+        return signInWithPopup(auth, facebookProvider);
     };
 
     // update userName===========
@@ -66,8 +72,8 @@ const AuthProvider = ({children}) => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser);
             if (currentUser) {
-                const uid = currentUser.uid;
-                console.log(uid);
+                // const uid = currentUser.uid;
+                // console.log(uid);
                 setLoading(false);
             }
             else {
@@ -95,7 +101,8 @@ const AuthProvider = ({children}) => {
         updateUserName,
         verifyEmail,
         resetPassword,
-        logUotUser
+        logUotUser,
+        loginWithFacebook
     }
     return (
         <AuthContext.Provider value={authInfo}>
