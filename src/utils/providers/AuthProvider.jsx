@@ -18,21 +18,25 @@ const AuthProvider = ({children}) => {
 
     // create User With Email And Password=============
     const registerUser = (email, password) => {
+        setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password);
     };
 
     // login User with email and password===============
     const loginUser = (email, password) => {
+        setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
     };
 
     // login and register user with google account=======
     const loginWithGoogle = () => {
+        setLoading(true);
         return signInWithPopup(auth, googleProvider);
     };
 
     // update userName===========
     const updateUserName = (name) => {
+        setLoading(true);
         return updateProfile(auth.currentUser, {
             displayName: name,
         });
@@ -40,16 +44,19 @@ const AuthProvider = ({children}) => {
 
     // send a verification email=============
     const verifyEmail = () => {
+        setLoading(true);
         return sendEmailVerification(auth.currentUser);
     }
 
     // sent reset password email=================
     const resetPassword = (email) => {
+        setLoading(true);
         return sendPasswordResetEmail(auth, email);
     };
 
     // logOut user===============================
     const logUotUser = () => {
+        setLoading(true);
         return signOut(auth)
     }
 
@@ -61,10 +68,12 @@ const AuthProvider = ({children}) => {
             if (currentUser) {
                 const uid = currentUser.uid;
                 console.log(uid);
+                setLoading(false);
             }
             else {
                 console.log('user signed out');
             }
+            setLoading(false);
         });
 
         return () => {
@@ -79,6 +88,7 @@ const AuthProvider = ({children}) => {
 
     const authInfo = {
         user,
+        loading,
         registerUser,
         loginUser,
         loginWithGoogle,
