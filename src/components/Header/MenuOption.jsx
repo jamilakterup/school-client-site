@@ -4,18 +4,27 @@ import Menu from '@mui/material/Menu';
 import avatarImg from "../../assets/images/avatar.jpg";
 import {MdEmail, MdOutlineSpaceDashboard, MdLogout} from "react-icons/md";
 import {Link} from 'react-router-dom';
+import {useContext} from 'react';
+import {AuthContext} from '../../utils/providers/AuthProvider';
 
 
 
 const MenuOption = () => {
     const [anchorElUser, setAnchorElUser] = useState(null);
+    const {user, logUotUser} = useContext(AuthContext);
 
     const handleOpenUserMenu = (event) => {
         setAnchorElUser(event.currentTarget);
     };
+
     const handleCloseUserMenu = () => {
         setAnchorElUser(null);
     };
+
+    const handleLogout = () => {
+        logUotUser();
+    }
+
 
     return (
         <Box sx={{flexGrow: 0}}>
@@ -40,7 +49,7 @@ const MenuOption = () => {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
             >
-                <Link to="">
+                <Link to="" title={user?.displayName}>
                     <MenuItem onClick={handleCloseUserMenu}>
                         <Typography textAlign="left"><span className='flex items-center gap-2 text-sm'><MdEmail /> প্রোফাইল </span></Typography>
                     </MenuItem>
@@ -52,11 +61,21 @@ const MenuOption = () => {
                     </MenuItem>
                 </Link>
 
-                <Link to="/login">
-                    <MenuItem onClick={handleCloseUserMenu}>
-                        <Typography textAlign="left"><span className='flex items-center gap-2 text-sm'><MdLogout /> লগইন </span></Typography>
-                    </MenuItem>
-                </Link>
+                {
+                    user?.email ?
+                        <MenuItem onClick={() => {
+                            handleCloseUserMenu();
+                            handleLogout();
+                        }}>
+                            <Typography textAlign="left"><span className='flex items-center gap-2 text-sm'><MdLogout /> লগআউট </span></Typography>
+                        </MenuItem>
+                        :
+                        <Link to="/login">
+                            <MenuItem onClick={handleCloseUserMenu}>
+                                <Typography textAlign="left"><span className='flex items-center gap-2 text-sm'><MdLogout /> লগইন </span></Typography>
+                            </MenuItem>
+                        </Link>
+                }
             </Menu>
         </Box>
     );

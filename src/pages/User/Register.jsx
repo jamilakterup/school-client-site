@@ -40,7 +40,7 @@ const validationSchema = yup.object({
 const Register = () => {
     const [showText, setShowText] = useState(false);
     const [showConfirmText, setShowConfirmText] = useState(false);
-    const {registerUser, loginWithGoogle, updateUserName} = useContext(AuthContext);
+    const {registerUser, loginWithGoogle, updateUserName, verifyEmail} = useContext(AuthContext);
 
     const handleGoogleLogin = () => {
         loginWithGoogle()
@@ -67,6 +67,15 @@ const Register = () => {
                 .then(userCredential => {
                     const user = userCredential.user;
                     console.log(user);
+
+                    verifyEmail(user)
+                        .then(() => {
+                            window.alert('email verification send')
+                        })
+                        .catch(err => {
+                            console.log(err);
+                        })
+
                     updateUserName(values.name)
                         .then(() => {
 

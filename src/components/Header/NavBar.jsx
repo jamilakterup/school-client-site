@@ -1,4 +1,4 @@
-import {useEffect, useRef, useState} from "react";
+import {useContext, useEffect, useRef, useState} from "react";
 import Logo from "../../assets/images/logo.png";
 import MenuOption from "./MenuOption";
 import MobileMenu from "./MobileMenu";
@@ -10,6 +10,7 @@ import {NavLink} from "react-router-dom";
 import {HiMiniBars3} from "react-icons/hi2";
 import {RxCross2} from "react-icons/rx";
 import "./NavBar.css";
+import {AuthContext} from "../../utils/providers/AuthProvider";
 
 
 
@@ -17,6 +18,8 @@ const NavBar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
     const navBarRef = useRef(null);
+    const {user} = useContext(AuthContext);
+    console.log(user);
 
 
     const toggleDrawer = () => {

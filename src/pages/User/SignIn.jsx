@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 import {Button, Divider, TextField} from '@mui/material';
 import {PiEyeThin, PiEyeClosed} from "react-icons/pi";
 import {FcGoogle} from "react-icons/fc";
-import {useContext, useState} from "react";
+import {useContext, useRef, useState} from "react";
 import {AuthContext} from "../../utils/providers/AuthProvider";
 
 
@@ -26,7 +26,8 @@ const validationSchema = yup.object({
 
 const SignIn = () => {
     const [showText, setShowText] = useState(false);
-    const {loginUser, loginWithGoogle} = useContext(AuthContext)
+    const {loginUser, loginWithGoogle, resetPassword} = useContext(AuthContext);
+    const emailRef = useRef();
 
     const handleGoogleLogin = () => {
         loginWithGoogle()
@@ -51,12 +52,35 @@ const SignIn = () => {
                 .then(userCredential => {
                     const user = userCredential.user;
                     console.log(user);
+                    if (!user.emailVerified) {
+                        window.alert('Email is not verified')
+                    }
                 })
                 .catch(err => {
                     console.log(err)
                 });
         },
     });
+
+
+    // handleResetPassword=============
+    const handleResetPassword = () => {
+        const email = emailRef.current.value;
+
+        if (!email) {
+            window.alert('Password enter a valid email');
+            return;
+        };
+
+        resetPassword(email)
+            .then(() => {
+                window.alert('Password reset email sent');
+            })
+            .catch(err => {
+                console.log(err);
+            })
+    };
+
 
 
     return (
@@ -76,6 +100,7 @@ const SignIn = () => {
                         id="email"
                         name="email"
                         label="Email"
+                        inputRef={emailRef}
                         value={formik.values.email}
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
@@ -100,9 +125,9 @@ const SignIn = () => {
                         <span className="absolute right-2 top-6" onClick={() => setShowText(!showText)}>{showText ? <PiEyeThin /> : <PiEyeClosed />}</span>
                     </div>
 
-                    <div className="flex justify-between">
+                    <div className="flex justify-between mt-4">
                         <label htmlFor="remember"><input type="checkbox" name="remember" id="remember" /> Remember me</label>
-                        <p>forget password?</p>
+                        <button onClick={handleResetPassword} className="underline text-blue-600">forget password?</button>
                     </div>
 
                     <button type="submit" className="btn w-full p-[6px] my-6">Login</button>
@@ -111,7 +136,7 @@ const SignIn = () => {
                 <div className="mt-4">
                     <Button onClick={handleGoogleLogin} variant="elevated" fullWidth className="shadow-md" startIcon={<FcGoogle />}>Google login</Button>
                 </div>
-                <p className="text-xs mt-5">Don't have account? <Link to="/register" className="hover:text-blue-700 underline">Sign Up</Link></p>
+                <p className="text-xs mt-5">Don't have account? <Link to="/register" className="text-blue-600 underline">Sign Up</Link></p>
             </div>
         </section>
     );
