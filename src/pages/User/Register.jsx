@@ -12,6 +12,8 @@ import {useState} from "react";
 import {useContext} from "react";
 import {AuthContext} from "../../utils/providers/AuthProvider";
 
+
+
 const validationSchema = yup.object({
     name: yup
         .string('Enter your name')
@@ -43,6 +45,7 @@ const Register = () => {
     const [showConfirmText, setShowConfirmText] = useState(false);
     const {registerUser, loginWithGoogle, updateUserName, verifyEmail, loginWithFacebook} = useContext(AuthContext);
     const navigate = useNavigate();
+
 
     const handleGoogleLogin = () => {
         loginWithGoogle()
@@ -77,35 +80,27 @@ const Register = () => {
             confirm: '',
         },
         validationSchema: validationSchema,
-        onSubmit: (values) => {
-            registerUser(values.email, values.password)
-                .then(userCredential => {
-                    const user = userCredential.user;
-                    console.log(user);
+        onSubmit: async (values) => {
+            try {
+                const userCredential = await registerUser(values.email, values.password);
+                const user = userCredential.user;
+                console.log(user);
 
-                    verifyEmail(user)
-                        .then(() => {
-                            if (user.emailVerified) {
-                                navigate('/');
-                            } else {
-                                window.alert('Please verify your email before continuing.');
-                            }
-                        })
-                        .catch(err => {
-                            console.log(err);
-                        })
+                // Trigger email verification
+                await verifyEmail(user);
 
-                    updateUserName(values.name)
-                        .then(() => {
+                if (user.emailVerified) {
+                    // Redirect to the homepage after email verification
+                    navigate('/');
+                } else {
+                    window.alert('Please verify your email before continuing.');
+                    navigate('/login');
+                }
 
-                        })
-                        .catch(err => {
-                            console.log(err);
-                        })
-                })
-                .catch(err => {
-                    console.log(err);
-                })
+                await updateUserName(values.name);
+            } catch (error) {
+                console.error(error);
+            }
         },
     });
 
