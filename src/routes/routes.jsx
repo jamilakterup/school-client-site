@@ -20,6 +20,8 @@ import Blog from "../pages/Blog/Blog";
 import Contact from "../pages/Contact/Contact";
 import SignIn from "../pages/User/SignIn";
 import Register from "../pages/User/Register";
+import DashboardLayout from "../layout/DashboardLayout";
+import DashboardHome from "../pages/Dashboard/DashboardHome/DashboardHome";
 
 const router = createBrowserRouter([
     {
@@ -108,6 +110,17 @@ const router = createBrowserRouter([
                 path: 'register',
                 element: <Register />
             },
+        ])
+    },
+    {
+        path: '/dashboard',
+        element: <DashboardLayout />,
+        errorElement: <ErrorPage />,
+        children: ([
+            {
+                path: '/dashboard',
+                element: <DashboardHome />
+            }
         ])
     }
 ]);

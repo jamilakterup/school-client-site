@@ -55,7 +55,7 @@ const MenuOption = () => {
                     </MenuItem>
                 </Link>
 
-                <Link to="">
+                <Link to="/dashboard">
                     <MenuItem onClick={handleCloseUserMenu}>
                         <Typography textAlign="left"><span className='flex items-center gap-2 text-sm'><MdOutlineSpaceDashboard /> ড্যাশবোর্ড </span></Typography>
                     </MenuItem>
