@@ -112,6 +112,8 @@ const router = createBrowserRouter([
             },
         ])
     },
+
+    // dashboard content=====================
     {
         path: '/dashboard',
         element: <DashboardLayout />,
